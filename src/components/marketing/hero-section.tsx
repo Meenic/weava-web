@@ -33,7 +33,7 @@ export function HeroSection() {
           Create dynamic, choice-driven narratives that evolve through your
           decisions.
         </p>
-        <PromptForm />
+        <PromptForm minHeight="min-h-[150px] md:min-h-[200px]" />
       </div>
     </section>
   );
