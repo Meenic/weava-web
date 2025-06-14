@@ -2,23 +2,23 @@ import Link from "next/link";
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6";
 
 const productLinks = [
-  { label: "Features", href: "/features" },
+  { label: "Features", href: "#features" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Templates", href: "/templates" },
-  { label: "Examples", href: "/examples" },
+  { label: "Templates", href: "#templates" },
+  { label: "Examples", href: "#examples" },
 ];
 
 const resourceLinks = [
-  { label: "Documentation", href: "/docs" },
-  { label: "API Reference", href: "/api" },
-  { label: "Tutorials", href: "/tutorials" },
-  { label: "Blog", href: "/blog" },
+  { label: "Documentation", href: "#docs" },
+  { label: "API Reference", href: "#api" },
+  { label: "Tutorials", href: "#tutorials" },
+  { label: "Blog", href: "#blog" },
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-  { label: "Cookie Policy", href: "/cookies" },
+  { label: "Privacy Policy", href: "#privacy" },
+  { label: "Terms of Service", href: "#terms" },
+  { label: "Cookie Policy", href: "#cookies" },
 ];
 
 const socialItems = [
