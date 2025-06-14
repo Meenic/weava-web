@@ -1,3 +1,5 @@
+import { PromptForm } from "../forms/prompt-form";
+
 export function HeroSection() {
   return (
     <section className="min-h-[600px] max-h-[910px] h-screen flex items-center justify-center relative overflow-hidden">
@@ -27,10 +29,11 @@ export function HeroSection() {
         <h1 className="scroll-m-20 text-4xl md:text-6xl lg:text-7xl xl:text-8xl [font-family:var(--font-geist-mono)] font-bold tracking-tight text-balance mb-6 md:mb-8">
           AI Interactive Storytelling
         </h1>
-        <p className="md:text-xl lg:text-2xl font-semibold max-w-md lg:max-w-lg leading-relaxed text-foreground/90">
+        <p className="md:text-xl lg:text-2xl font-semibold max-w-md lg:max-w-lg leading-relaxed text-foreground/90 mb-8">
           Create dynamic, choice-driven narratives that evolve through your
           decisions.
         </p>
+        <PromptForm />
       </div>
     </section>
   );
