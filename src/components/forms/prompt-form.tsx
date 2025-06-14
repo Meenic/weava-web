@@ -2,7 +2,7 @@
 
 import { DynamicForm } from "@/components/forms/dynamic-form";
 import { submitPromptAction } from "@/actions/form-actions";
-import { Send } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { FormConfig } from "@/types/form-types";
 import { promptSchema } from "@/schemas/form-schemas";
 import { cn } from "@/lib/utils";
@@ -45,7 +45,7 @@ export function PromptForm({
   onSuccess,
   onError,
   showButton = true,
-  buttonIcon = Send,
+  buttonIcon = ArrowUp,
   buttonPosition = "bottom-right",
   buttonSize = "md",
 }: PromptFormProps) {

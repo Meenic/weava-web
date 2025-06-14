@@ -2,6 +2,7 @@ import { ButtonConfig } from "@/types/form-types";
 import { cn } from "@/lib/utils";
 
 interface FloatingButtonProps extends ButtonConfig {
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   children?: React.ReactNode;
   className?: string;
 }
@@ -51,7 +52,7 @@ export function FloatingButton({
       disabled={disabled || loading}
       aria-label={ariaLabel}
       className={cn(
-        "absolute rounded-full transition-all duration-200 disabled:cursor-not-allowed group",
+        "absolute rounded-full disabled:cursor-not-allowed",
         positionClasses[position],
         variantClasses[variant],
         sizeClasses[size],
@@ -62,6 +63,9 @@ export function FloatingButton({
       {Icon && (
         <Icon
           className={cn(iconSizeClasses[size], loading ? "animate-pulse" : "")}
+          strokeWidth={2.5}
+          width={size === "sm" ? 16 : size === "md" ? 20 : 24}
+          height={size === "sm" ? 16 : size === "md" ? 20 : 24}
         />
       )}
       {children}
