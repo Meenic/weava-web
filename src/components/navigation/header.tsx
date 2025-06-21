@@ -5,10 +5,7 @@ import { Button } from "../ui/button";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const navItems = [
-  { label: "Pricing", href: "/pricing" },
-  { label: "About", href: "#about" },
-];
+const navItems = [{ label: "Pricing", href: "/pricing" }];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
