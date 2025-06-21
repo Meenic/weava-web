@@ -76,7 +76,7 @@ export async function submitPromptAction(
 
     return {
       success: true,
-      message: "Prompt submitted successfully!",
+      message: "Prompt submitted successfully.",
       data: { promptId: Math.random().toString(36).substr(2, 9) },
     };
   });
@@ -109,7 +109,7 @@ export async function submitStoryAction(
 
     return {
       success: true,
-      message: "Story saved successfully!",
+      message: "Story saved successfully.",
       data: { storyId: Math.random().toString(36).substr(2, 9) },
     };
   });
