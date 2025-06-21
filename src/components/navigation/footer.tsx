@@ -35,8 +35,8 @@ const allLinkSections = [
 
 export function Footer() {
   return (
-    <div className="flex justify-center mb-6">
-      <footer className="bg-background/40 backdrop-blur-md rounded-2xl max-w-4xl w-[calc(100%-2rem)] p-6">
+    <div className="flex justify-center">
+      <footer className="bg-background/40 backdrop-blur-md rounded-2xl max-w-4xl w-[calc(100%-2rem)] p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div className="lg:col-span-2 flex flex-col gap-4">
             <Link
