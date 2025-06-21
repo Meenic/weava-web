@@ -44,7 +44,7 @@ export function PricingSection() {
           <h2 className="scroll-m-20 text-4xl md:text-5xl lg:text-6xl [font-family:var(--font-geist-mono)] font-bold tracking-tight mb-4">
             Pricing
           </h2>
-          <p className="text-xl md:text-2xl font-semibold text-foreground/80 max-w-md mx-auto lg:mx-0">
+          <p className="text-xl md:text-2xl font-semibold text-foreground/90 max-w-md mx-auto lg:mx-0">
             Choose the plan that fits your storytelling needs
           </p>
         </div>
