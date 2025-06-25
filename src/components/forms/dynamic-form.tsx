@@ -193,7 +193,7 @@ export function DynamicForm({
       {isPending && (
         <div className="mt-3 text-left text-sm text-[#8F00FF]/70 font-medium">
           <div className="flex items-center gap-2">
-            <div className="animate-spin h-3 w-3 border border-[#8F00FF]/30 border-t-[#8F00FF] rounded-full"></div>
+            <div className="animate-spin h-3 w-3 border border-[#8F00FF]/30 border-t-[#8F00FF] rounded-full" />
             {config.loadingLabel || "Processing..."}
           </div>
         </div>
