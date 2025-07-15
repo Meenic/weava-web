@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "../ui/button";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -121,10 +122,18 @@ export function Header() {
           {/* Logo */}
           <Link
             href={"/"}
-            className="block w-8 h-8 bg-[#8F00FF] rounded-full"
+            className="block"
             onClick={isMenuOpen ? closeMenu : undefined}
             aria-label="Homepage"
-          />
+          >
+            <Image
+              src="/weava_logo.svg"
+              alt="Weava Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
+          </Link>
 
           <div className="flex items-center gap-4">
             {/* Desktop navigation */}

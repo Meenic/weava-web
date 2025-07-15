@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6";
 
 const productLinks = [
@@ -41,9 +42,17 @@ export function Footer() {
           <div className="lg:col-span-2 flex flex-col gap-4">
             <Link
               href={"/"}
-              className="block w-8 h-8 bg-[#8F00FF] rounded-full"
+              className="block"
               aria-label="Homepage"
-            />
+            >
+              <Image
+                src="/weava_logo.svg"
+                alt="Weava Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+            </Link>
             <p className="text-sm text-foreground/70 max-w-md">
               Create dynamic, choice-driven narratives that evolve through your
               decisions.
