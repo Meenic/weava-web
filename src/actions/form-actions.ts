@@ -28,12 +28,13 @@ async function processFormAction<T extends z.ZodSchema>(
     const errors: Record<string, string[]> = {};
 
     for (const [key, value] of Object.entries(fieldErrors)) {
-      errors[key] = value ?? [];
+      errors[key] = Array.isArray(value) ? (value as string[]) : [];
     }
 
     return {
       errors,
-      message: Object.values(errors).flat().length > 0 ? "" : "Validation failed",
+      message:
+        Object.values(errors).flat().length > 0 ? "" : "Validation failed",
       success: false,
     };
   }
