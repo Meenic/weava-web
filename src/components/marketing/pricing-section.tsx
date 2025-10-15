@@ -54,7 +54,7 @@ export function PricingSection() {
           {pricingPlans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-3xl p-6 md:p-10 border-2 ${
+              className={`relative rounded-3xl p-6 md:p-10 border ${
                 plan.popular
                   ? "bg-card/90 backdrop-blur-md border-[#8F00FF]"
                   : "bg-card/60 backdrop-blur-md border-border"

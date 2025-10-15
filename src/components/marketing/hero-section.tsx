@@ -26,7 +26,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="flex flex-col items-center justify-center max-w-5xl px-4 text-center relative z-10">
-        <h1 className="scroll-m-20 text-4xl md:text-6xl lg:text-7xl xl:text-8xl [font-family:var(--font-geist-mono)] font-bold tracking-tight text-balance mb-6 md:mb-8">
+        <h1 className="scroll-m-20 text-4xl md:text-6xl lg:text-7xl [font-family:var(--font-geist-mono)] font-bold tracking-tight text-balance mb-6 md:mb-8">
           AI Interactive Storytelling
         </h1>
         <p className="md:text-xl lg:text-2xl font-semibold max-w-md lg:max-w-lg leading-relaxed text-foreground/90 mb-8">
