@@ -1,4 +1,4 @@
-import { PromptForm } from "../forms/prompt-form";
+import { StyledTextarea } from "../common/styled-textarea";
 
 export function HeroSection() {
   return (
@@ -33,7 +33,7 @@ export function HeroSection() {
           Create dynamic, choice-driven narratives that evolve through your
           decisions.
         </p>
-        <PromptForm minHeight="min-h-[150px] md:min-h-[200px]" />
+        <StyledTextarea />
       </div>
     </section>
   );
