@@ -39,8 +39,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <div className="flex justify-center px-4 py-12">
-      <footer className="bg-background/40 backdrop-blur-md max-w-4xl w-full rounded-2xl p-8 md:p-12">
+    <div className="flex justify-center px-4 pb-6 pt-12">
+      <footer className="bg-background/40 backdrop-blur-md max-w-4xl w-full rounded-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8">
           {/* Brand section */}
           <div className="lg:col-span-2 flex flex-col gap-6">
@@ -53,7 +53,7 @@ export function Footer() {
                 className="w-8 h-8"
               />
             </Link>
-            <p className="text-sm text-foreground/70 max-w-md leading-relaxed">
+            <p className="text-sm text-foreground/70 max-w-sm leading-relaxed">
               Create dynamic, choice-driven narratives that evolve through your
               decisions.
             </p>
@@ -64,7 +64,7 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center text-foreground/60 hover:text-foreground rounded-full transition-colors duration-200 hover:bg-foreground/5"
+                  className="w-9 h-9flex items-center justify-center text-foreground/60 hover:text-foreground transition-colors duration-200"
                   aria-label={label}
                 >
                   <Icon size={18} />
