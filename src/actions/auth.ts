@@ -21,35 +21,33 @@ const signUpSchema = z.object({
 });
 
 const signInSchema = z.object({
-  email: z.email("Invalid email address"),
+  email: z.string().email("Invalid email address"),
   password: z.string().min(1, "Password is required"),
 });
 
 export async function signUpAction(formData: FormData) {
-  try {
-    const rawData = {
-      email: formData.get("email"),
-      password: formData.get("password"),
-      name: formData.get("name"),
+  const rawData = {
+    email: formData.get("email"),
+    password: formData.get("password"),
+    name: formData.get("name"),
+  };
+
+  const parsed = signUpSchema.safeParse(rawData);
+
+  if (!parsed.success) {
+    const errors = parsed.error.flatten().fieldErrors;
+    return {
+      success: false,
+      errors,
     };
+  }
 
-    const parsed = signUpSchema.safeParse(rawData);
+  const { email, password, name } = parsed.data;
 
-    if (!parsed.success) {
-      const errors = z.treeifyError(parsed.error);
-      return {
-        success: false,
-        errors,
-      };
-    }
-
-    const { email, password, name } = parsed.data;
-
+  try {
     await auth.api.signUpEmail({
       body: { email, password, name },
     });
-
-    redirect("/");
   } catch {
     return {
       success: false,
@@ -58,32 +56,33 @@ export async function signUpAction(formData: FormData) {
       },
     };
   }
+
+  // Redirect outside try-catch so it can throw properly
+  redirect("/");
 }
 
 export async function signInAction(formData: FormData) {
-  try {
-    const rawData = {
-      email: formData.get("email"),
-      password: formData.get("password"),
+  const rawData = {
+    email: formData.get("email"),
+    password: formData.get("password"),
+  };
+
+  const parsed = signInSchema.safeParse(rawData);
+
+  if (!parsed.success) {
+    const errors = parsed.error.flatten().fieldErrors;
+    return {
+      success: false,
+      errors,
     };
+  }
 
-    const parsed = signInSchema.safeParse(rawData);
+  const { email, password } = parsed.data;
 
-    if (!parsed.success) {
-      const errors = z.treeifyError(parsed.error);
-      return {
-        success: false,
-        errors,
-      };
-    }
-
-    const { email, password } = parsed.data;
-
+  try {
     await auth.api.signInEmail({
       body: { email, password },
     });
-
-    redirect("/");
   } catch {
     return {
       success: false,
@@ -92,17 +91,21 @@ export async function signInAction(formData: FormData) {
       },
     };
   }
+
+  redirect("/");
 }
 
 export async function signOutAction() {
   try {
     await auth.api.signOut({ headers: await headers() });
-
-    redirect("/sign-in");
   } catch {
     return {
       success: false,
-      error: "Failed to sign out. Please try again.",
+      errors: {
+        _form: ["Failed to sign out. Please try again."],
+      },
     };
   }
+
+  redirect("/sign-in");
 }
