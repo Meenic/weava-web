@@ -32,7 +32,7 @@ const linkSections = [
 ];
 
 const socialLinks = [
-  { label: "Twitter", href: "https://twitter.com", icon: FaXTwitter },
+  { label: "X", href: "https://x.com", icon: FaXTwitter },
   { label: "GitHub", href: "https://github.com", icon: FaGithub },
   { label: "Discord", href: "https://discord.com", icon: FaDiscord },
 ];
@@ -76,7 +76,7 @@ export function Footer() {
           {/* Link sections */}
           {linkSections.map(({ title, links }) => (
             <div key={title} className="flex flex-col gap-4">
-              <h3 className="text-sm font-semibold [font-family:var(--font-geist-mono)] text-foreground mb-1">
+              <h3 className="text-sm font-semibold text-foreground mb-1">
                 {title}
               </h3>
               <ul className="flex flex-col gap-3">
