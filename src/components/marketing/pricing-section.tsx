@@ -103,17 +103,17 @@ const getFeaturesTitle = (planName: string) => {
 
 export function PricingSection() {
   return (
-    <section className="px-4 pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 relative">
+    <section className="px-6 pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 relative">
       {/* Top Fade Gradient */}
       <div className="absolute top-0 left-0 right-0 h-[30%] bg-gradient-to-b from-[#8F00FF]/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2.5 sm:mb-3">
-            Pricing
+          <h2 className="text-4xl font-semibold tracking-tight text-balance lg:font-semibold xl:text-5xl xl:tracking-tighter mb-2.5 sm:mb-3">
+            Plans & Pricing
           </h2>
-          <p className="text-sm sm:text-base md:text-lg font-medium text-foreground/70 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-foreground/70 font-medium">
             Start free, upgrade when you&apos;re ready
           </p>
         </div>
@@ -185,19 +185,13 @@ export function PricingSection() {
 
               {/* CTA Button */}
               <Button
-                className={`w-full text-xs font-semibold mb-4 sm:mb-5 transition-all duration-300 ${
+                className={`w-full font-semibold mb-4 sm:mb-5 transition-all duration-300 ${
                   plan.popular
-                    ? "bg-[#8F00FF] hover:bg-[#7A00E0] text-foreground shadow-sm hover:shadow-md"
+                    ? "bg-[#8F00FF] hover:bg-[#7A00E0] text-foreground"
                     : "border hover:bg-foreground/5"
                 }`}
                 size="lg"
-                variant={
-                  plan.popular
-                    ? "default"
-                    : plan.price === "$0"
-                    ? "outline"
-                    : "secondary"
-                }
+                variant={plan.popular ? "default" : "outline"}
               >
                 {plan.cta}
               </Button>
